@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    *{
+  padding:0;
+  margin:0;
+  
+}
+body{
+  background: #AE182B;
+  
+}
+div#center{
+  padding:10px;
+  border: 3px solid green;
+  width: 70%;
+  height: 70vh;
+  margin: auto ;
+  margin-top:10vh; 
+  background:#FDCA59;
+  font-size:16px;
+  font-family: Verdana;
+}
+.heading-inner{
+  margin: 0 auto;
+  width:fit-content;
+  margin-bottom:10px;
+}
+form{
+  padding: 0 8vw;
+}
+table{
+  width:100%;
+}
+tr{
+  height:10vh;
+}
+td#label{
+  font-size:16px;
+  color:#000;
+  font-weight:800;
+    
+}
+
+#btnSubmit{
+  background:#fff;
+  color:#4CAF50;
+  font-size:16px;
+  font-weight:bold;
+  height:40px;
+  padding:5px;
+  
+}
+.inputBox{
+  height:20px;
+  font-size:16px;
+  width:170px;
+  
+}
+.selectBox{
+  height:30px;
+  width:170px;
+}
+  </style>
+<title>Leave Application portal</title>
+</head>
+<body>
+
+<div   id="center">
+ 
+
+    <form   method="post">
+      {% csrf_token %}
+     <table id="form-container">
+       <h2 class="heading-inner"> Leave Application portal </h2>
+  <tr>
+    <!-- <td id="label">Employee Code </td><td><input  type="text"  class="inputBox"  placeholder="99999" name="Empcode" maxlength="5" pattern="^[1-9][0-9]*$" min="10000" minlength="5" required/></td> -->
+    <td id="label">Employee Name </td><td><input  type="text"  class="inputBox"  maxlength="50"  minlength="2"  placeholder="Enter full name" name="empname"required/></td>
+  </tr>
+  <tr>
+    <td id="label" for="drpleavetype">Applying For </td><td><select  name="drpleavetype" class="selectBox">
+  <option selected>Select an option</option>
+  <option value="CasualLeave"> Casual Leave</option>
+    <option value="SickLeave"> Sick Leave</option>
+    <option value="CompOff"> Comp Off</option>
+</select></td>
+    <td id="label" for="drpapplyingtyp">Applying Type </td><td><select  name="drpapplyingtyp" class="selectBox">
+  <option selected>Select an option</option>
+  <option value="Forenoon">Forenoon</option>
+    <option value="Afternoon">Afternoon</option>
+    <option value="FullDay">Full Day</option>
+</select></td>
+  </tr>
+   <tr>
+    <td id="label">No of Days </td><td><input type="number" placeholder="Enter whole number" name="Noofdays" required/></td>
+    <td id="label">From Date </td><td><input type="date" value="2020-05-06" class="inputBox" name="todate" required/></td>
+  </tr>
+  <tr>
+    <td id="label">To Date </td><td><input type="date" value="2020-05-06" class="inputBox" name="fromdate"required/></td>
+    <td id="label">Contact No </td><td><input  type="mobile" maxlenth="10" minlength="7" pattern="^[789]\d{9}$" class="inputBox"  placeholder="9999999999" name="mobileno" required/></td>
+    <!-- <td id="label">status </td><td><input type="text" value="2020-05-06" class="inputBox" name="fromdate"required/></td> -->
+  </tr>
+ 
+    <td id="label">Reason</td><td><input  type="text"  class="inputBox"  maxlenth="100" minlength="5"  placeholder="Enter leave reason" required/></td>
+    <td><input type="submit" id="btnSubmit" value="Submit"/></td>
+     <td><input type="submit" id="btnSubmit" value="Status"/></td>
+
+    <!-- <td id="label">status </td><td><input type="text" value="2020-05-06" class="inputBox" name="fromdate"required/></td> -->
+  </tr>
+
+  
+  </tr>
+
+  
+</table>
+</form>
+ 
+  
+  </div>
+
+</body>
+</html>

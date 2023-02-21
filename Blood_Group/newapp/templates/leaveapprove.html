@@ -1,0 +1,213 @@
+<html>
+<head>
+    <style>
+        header{
+  text-align:center;
+  background-color:#FF7F50;
+  padding:1em 
+}
+footer{
+   positfocusoution: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align:center;
+  background-color:#FF7F50
+ 
+}
+form{
+  background-color:#F0F8FF
+  }
+#formLogin{  
+  text-align:center;
+}
+.text{
+  padding:0.5em;  
+  align-left:5em;
+  width:200px;
+  height:10px;
+}
+label{
+  padding:0.5em;
+  align-left:5em;
+}
+
+.btnSubmit{
+  
+}
+
+.logout{ 
+  float:right;
+background-color:yellow;
+}
+#Details{
+  background-color:#F0F8FF
+  }
+
+table tr th{
+  border:1px solid black; 
+  text-align:center;
+}
+table tr td{
+  border:1px solid black; 
+  text-align:center;
+}
+#Details{
+  padding:0.5em;  
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FF7F50;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #FF7F50;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#upload{
+    display:none
+}
+img{
+ 
+  float:left;
+  width:200px;
+  height:150px
+}
+.badge{
+  background-color:red;
+  position:relative;
+}
+
+.drop{
+  border: 1px solid black;
+ background-color:#F0FFFF;
+  
+}
+
+ </style>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body ng-app="Leave" ng-controller="myCtrl">
+     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Profile</span> 
+    <header>  
+     
+         <!-- <div id="mySidenav" style="float:left" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <img src="https://images.pexels.com/photos/40797/wild-flowers-flowers-plant-macro-40797.jpeg?h=350&auto=compress" class="img-circle"><br/>
+      <label style="margin-left:-34px">Subba reddy</label><br/>  
+            <label style="margin-left:-34px">
+    <input id="upload" type="file"/>
+    <a href="" id="upload_link">Change Profile Pic</a>​</label> 
+    </div>
+    <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav" style="height=40%"> -->
+      <!-- <li class="active"><a href="#">Home</a></li>  
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Leave <span class="caret"></span></a>
+       <ul class="dropdown-menu drop">
+              <li><a href="#">Leave request</a></li>
+              <li><a href="#">Leave history</a></li>
+              <li><a href="#">Leave Approver</a></li>
+            </ul> -->
+       
+        <!-- </li>  <li>
+      <a href="#">Remarks</a></li>
+        <li><a href="#">Parents Suggestions</a></li>
+        <li><a href="#">Events</a></li>
+         <li><a href="#">About Us</a></li>
+        <li  class="dropdown"><a  class="dropdown-toggle" data-toggle="dropdown" href="#">Admin<span class="caret"></span></a>
+        <ul class="dropdown-menu drop">
+              <li><a href="#">Student Details</a></li>
+              <li><a href="#">Employee Details</a></li>
+              <li><a href="#">Branch Detils</a></li>
+            </ul>
+        </li>   
+        </ul> -->
+      <!-- <ul class="nav navbar-nav navbar-right" style="margin-right:15px;">
+        <li class="dropdown" ng-click="ExpandNotifications()"><a  class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-bell"></span>Notify<span class="badge">5</span></a>
+        <ul class="dropdown-menu  drop notification">
+              <li><a href="#">Personal</a></li>
+              <li><a href="#">Mange</a></li>
+              <li><a href="#">Help </a></li>
+           </ul>
+        </li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a>
+        
+        </li> -->
+          <!-- <li  class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Profile<span class="caret"></span></a>
+         <ul class="dropdown-menu drop">
+              <li><a href="#">Personal</a></li>
+              <li><a href="#">Mange</a></li>
+              <li><a href="#">Help </a></li>
+           </ul>
+        </li>
+        
+      </ul> -->
+        </nav>
+       
+      </header><br />
+    
+     <div id="Details">
+        <h3>Leave Approve</h3>
+        <table style="width:100%">
+          <tr>
+            <th>S.No</th>
+            <th>Leave Type</th>
+            <th>From Date</th>
+            <th>To Date</th> 
+            <th>Requested Days</th>
+            <th>Current Status</th>
+            <th>Comments</th>
+            <th>Update</th>
+          </tr>
+          <tr>
+          <td>1</td>
+            <td>Medical</td>
+            <td>1/2/2017</td>
+            <td>1/3/2017</td>
+            <td>1</td>
+            
+            <td><select>
+              <option value="Pending">Pending</option>
+              <option value="Accept">Accept</option>
+              <option value="Reject">Reject</option>
+              </select></td><td><input type="text" placeholder="write your comments and update" class="form-control" /></td>
+            <td> <button type="button" class="btn btn-xs btn-success" data-toggle="modal" data-target="#myModalUpdate">Accept</button><button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#myModalDelete">Reject</button></td>
+          </tr>
+        </table>
+      </div>
+      
+      <footer>
+        <h3>Actionfi Technologies Pvt Ltd</h3></footer>
+    </body>
+</head>
+</html>
